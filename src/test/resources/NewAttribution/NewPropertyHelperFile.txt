@@ -1,0 +1,1 @@
+{"name":"cyc_new_property","description":"","actions":[],"image":{"id":"","path":""},"type":"app","alternateName":"","url":""}

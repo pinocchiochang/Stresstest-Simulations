@@ -1,0 +1,51 @@
+/*
+Each line specifies a single user entry consisting of a user definition and an action.
+   * User definition: [user's name]([number of instances of this user to add to simulation], [seconds user is active])
+   * A user action specifies one thing that the user will do during the simulation.
+
+COMPLETE LIST OF USER ACTIONS
+.campaignAction
+   .add
+      .withAttribution            -number of campaigns to add with attribution
+      .withoutAttribution         -number of campaigns to add without attribution
+   .view.count                    -number of times to view a randomly selected campaign
+   .update
+      .addGoal.count              -number of randomly selected campaigns to add an attribution goal to
+      .removeGoal.count           -number of randomly selected campaigns to remove an attribution goal from
+      .changeName.count           -number of randomly selected campaigns to name-change (new name is randomly generated)
+      .addAlerts.count            -number of randomly selected campaigns to enable alerts for
+      .removeAlerts.count         -number of randomly selected campaigns to disable alerts for
+      .addAd
+         .withTag.count           -number of randomly selected campaigns to add an ad to, with a generated tag
+         .withoutTag.count        -number of randomly selected campaigns to add ad ad to, without a generated tag
+.generateReportAction.count       -number of reports to generate for a randomly selected campaign
+
+EXAMPLE
+Here is the configuration for a user named John to be injected 10 times into the simulation over 5 seconds.
+Each instance of John will add 1 campaign without attribution, add a goal to 2 randomly selected campaigns,
+and generate 4 reports.
+
+John(10, 5).campaignAction.add.withoutAttribution.count = 1
+John(10, 5).campaignAction.update.addGoal.count = 2
+John(10, 5).generateReportAction.count = 4
+
+NOTES
+* Having users with the same name but different numbers (e.g. "John(3, 1)" and "John(2, 4)") will result in a
+  simulation error.
+* You can use conventional multiline (not single line) comments in this file.
+* Everything done in this simulation is run in the active instance of the configured browser in application.conf, or the
+  default (first) instance if no previous active instance exists.
+* The simulation will actively output (to terminal) virtual user actions as they are completed.
+*/
+
+Ben(2, 3).campaignAction.add.withAttribution.count = 2
+Ben(2, 3).campaignAction.add.withoutAttribution.count = 1
+Sally(4, 5).campaignAction.view.count = 2
+Sally(4, 5).generateReportAction.count = 2
+John(3, 2).campaignAction.update.addGoal.count = 2
+John(3, 2).campaignAction.update.removeGoal.count = 2
+Bob(3, 3).campaignAction.update.changeName.count = 2
+Bob(3, 3).campaignAction.update.addAd.withTag.count = 2
+Bob(3, 3).campaignAction.update.addAd.withoutTag.count = 1
+Sarah(3, 1).campaignAction.update.addAlerts.count = 2
+Sarah(3, 1).campaignAction.update.removeAlerts.count = 2

@@ -1,0 +1,1 @@
+[{"name":"images","fileName":"images.jpeg","uri":"","width":100,"height":100,"size":8145,"format":{"id":3,"name":"Static Banner","type":"static","oldAdFormatId":20},"retina":false,"code":""}]

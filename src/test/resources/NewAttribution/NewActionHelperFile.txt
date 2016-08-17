@@ -1,0 +1,1 @@
+{"name":"cyc_new_action","nameParser":"String","description":"","trackingPixels":[],"value":"","valueParser":"String","conversionId":"","conversionIdParser":"String","status":"testing","isDeletable":true,"type":{"id":1},"isActionValueNumeric":false}
