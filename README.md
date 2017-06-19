@@ -1,6 +1,6 @@
 Stress Tester
 =========================
-This is my summer internship project in Medialets. It utilizes Gatling, Medialets' REST interface, a parser combinator, Json4s, and functional programming to simulate a wide variety of customizable stress tests and log all failed requests on a server (https://github.com/pinocchiochang/gatling-error-logger).
+This is my summer internship project in Medialets. It utilizes Gatling, Medialets' REST interface, a parser combinator, Json4s, and functional programming to simulate a wide variety of customizable stress tests and log all failed requests on a server (https://github.com/pinocchiochang/Error-Logger).
 
 To run a test, the user first customizes the test scenario to create his/her choice of virtual users who can do any combination of 11 actions. During the simulation, the stress tester will automate the specified actions of these virtual users and perform them on Medialets' platform. The stress tester then generates a report of the simulation (which includes information about the request response times, request failure rate, and other relevant stress statistics) and finally logs the simulation's failed requests on a server.
 
