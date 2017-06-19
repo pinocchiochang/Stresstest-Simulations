@@ -13,7 +13,7 @@ Get the project
 ---------------
 
 ```bash
-git clone https://github.com/pinocchiochang/stress-tester.git
+git clone https://github.com/pinocchiochang/Stresstest-Simulations.git
 ```
 
 Edit Config Files
